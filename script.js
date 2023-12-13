@@ -1,5 +1,7 @@
 let BtnRandom = document.getElementById("btnRandom");
 
+let BtnReset = document.getElementById("btnReset");
+
 let BtnRed = document.getElementById("btnRed");
 
 let BtnBlue = document.getElementById("btnBlue");
@@ -13,6 +15,12 @@ function BtnRandomHandler (){
     let Body = document.querySelector('body');
     Body.style.backgroundColor = colors[number];
     console.log(colors[number]);
+}
+
+function BtnResetHandler (){
+    let colors = ["white"]
+    let Body = document.querySelector('body');
+    Body.style.backgroundColor = colors;
 }
 
 function BtnRedHandler (){
@@ -31,6 +39,8 @@ function BtnGreenHandler (){
 }
 
 BtnRandom.addEventListener('click', BtnRandomHandler);
+
+BtnReset.addEventListener('click', BtnResetHandler);
 
 BtnRed.addEventListener('click', BtnRedHandler);
 
